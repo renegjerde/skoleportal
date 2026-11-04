@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>KaffeStatus - Pauserommet</title>
+  
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#FAF7F2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="KaffeStatus">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FAF7F2'/><text y='.9em' font-size='90'>☕</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div style="text-align:center; margin: 15px;"><a href="../index.html" style="text-decoration:none; background:rgba(0,0,0,0.1); color:inherit; padding:8px 16px; border-radius:20px; font-size:14px; font-weight:bold;">⬅ Tilbake til Hovedmeny</a></div>
+
+  <div class="app-container">
+    <header>
+      <h1>KaffeStatus ☕</h1>
+      <p>Pauserommet på arbeidsplassen</p>
+    </header>
+
+    <!-- Main Status Display -->
+    <div class="card status-display">
+      <div class="status-icon-wrapper" id="statusIcon">
+        <!-- SVG injected dynamically -->
+      </div>
+      <div>
+        <div class="status-badge" id="statusBadge">Sjekker status...</div>
+        <div class="status-time" id="statusTime">Venter på første registrering</div>
+      </div>
+    </div>
+
+    <!-- Actions Section -->
+    <div class="card action-section">
+      <div class="question-title">ER DU VED KAFFEKANNENE NÅ?</div>
+      
+      <div class="btn-group">
+        <button class="btn btn-fresh" onclick="setStatus('FRESH')">
+          <span>JA! NYBRYGGET!</span>
+          <div class="btn-icon-box">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 28C12 24 16 22 32 22C48 22 52 24 52 28V42C52 49 43 54 32 54C21 54 12 49 12 42V28Z" fill="#2C1A1D"/>
+              <path d="M48 30C53 30 57 33 57 38C57 43 52 45 48 45" stroke="#2C1A1D" stroke-width="3" stroke-linecap="round"/>
+              <path d="M22 16C22 12 26 10 26 6" stroke="#2C1A1D" stroke-width="3" stroke-linecap="round"/>
+              <path d="M32 18C32 14 36 12 36 8" stroke="#2C1A1D" stroke-width="3" stroke-linecap="round"/>
+              <path d="M42 16C42 12 46 10 46 6" stroke="#2C1A1D" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </button>
+
+        <button class="btn btn-yes" onclick="setStatus('YES')">
+          <span>JA</span>
+          <div class="btn-icon-box">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 26C14 22 18 20 32 20C46 20 50 22 50 26V40C50 47 42 52 32 52C22 52 14 47 14 40V26Z" fill="#2C1A1D"/>
+              <path d="M48 28C53 28 56 31 56 36C56 41 51 43 47 43" stroke="#2C1A1D" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </button>
+
+        <button class="btn btn-no" onclick="setStatus('NO')">
+          <span>NEI</span>
+          <div class="btn-icon-box">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 18H44L48 50C48 53 43 56 32 56C21 56 16 53 16 50L20 18Z" stroke="#2C1A1D" stroke-width="3" fill="none"/>
+              <path d="M20 28H44" stroke="#EF5350" stroke-width="2" stroke-dasharray="2 2"/>
+              <path d="M44 26C50 26 54 29 54 34C54 39 49 42 44 42" stroke="#2C1A1D" stroke-width="3"/>
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      <div class="note-input-container">
+        <input type="text" id="noteInput" class="note-input" placeholder="Valgfri notis (f.eks. Kanne 1 er full)...">
+      </div>
+    </div>
+
+    <!-- History Card -->
+    <div class="card">
+      <div class="history-title">Siste oppdateringer</div>
+      <ul class="history-list" id="historyList">
+        <li class="history-item"><span>Ingen historikk ennå</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Audio Synthesizer (Web Audio API)
+    const AudioEngine = {
+      ctx: null,
+      init() {
+        if (!this.ctx) {
+          this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+      },
+      playTone(freq, duration, type = 'sine', startTime = 0) {
+        if (!this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, this.ctx.currentTime + startTime);
+        
+        gain.gain.setValueAtTime(0.2, this.ctx.currentTime + startTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + startTime + duration);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+
+        osc.start(this.ctx.currentTime + startTime);
+        osc.stop(this.ctx.currentTime + startTime + duration);
+      },
+      playFresh() {
+        this.init();
+        // 1.0s Fanfare with sub-bass (C4-E4-G4-C5 + C2 Sub-bass)
+        this.playTone(65.41, 1.0, 'sine', 0); // Sub-bass
+        this.playTone(261.63, 0.25, 'triangle', 0);
+        this.playTone(329.63, 0.25, 'triangle', 0.2);
+        this.playTone(392.00, 0.25, 'triangle', 0.4);
+        this.playTone(523.25, 0.5, 'triangle', 0.6);
+      },
+      playYes() {
+        this.init();
+        // 0.9s Ascending Lift (G4 -> C5)
+        this.playTone(130.81, 0.9, 'sine', 0); // Warm bass
+        this.playTone(392.00, 0.4, 'sine', 0);
+        this.playTone(523.25, 0.5, 'sine', 0.35);
+      },
+      playNo() {
+        this.init();
+        // 1.0s Minor Sequence (E4 -> C4 -> A3)
+        this.playTone(82.41, 1.0, 'sine', 0); // Low bass bump
+        this.playTone(329.63, 0.3, 'sine', 0);
+        this.playTone(261.63, 0.3, 'sine', 0.3);
+        this.playTone(220.00, 0.4, 'sine', 0.6);
+      }
+    };
+
+    // SVG Icons
+    const ICONS = {
+      FRESH: `<svg viewBox="0 0 64 64" fill="none"><path d="M12 28C12 24 16 22 32 22C48 22 52 24 52 28V42C52 49 43 54 32 54C21 54 12 49 12 42V28Z" fill="#FFE082" stroke="#2C1A1D" stroke-width="3"/><path d="M48 30C53 30 57 33 57 38C57 43 52 45 48 45" stroke="#2C1A1D" stroke-width="3" stroke-linecap="round"/><path d="M22 16C22 12 26 10 26 6" stroke="#FFB74D" stroke-width="3" stroke-linecap="round"/><path d="M32 18C32 14 36 12 36 8" stroke="#FFB74D" stroke-width="3" stroke-linecap="round"/><path d="M42 16C42 12 46 10 46 6" stroke="#FFB74D" stroke-width="3" stroke-linecap="round"/></svg>`,
+      YES: `<svg viewBox="0 0 64 64" fill="none"><path d="M14 26C14 22 18 20 32 20C46 20 50 22 50 26V40C50 47 42 52 32 52C22 52 14 47 14 40V26Z" fill="#A5D6A7" stroke="#2C1A1D" stroke-width="3"/><path d="M48 28C53 28 56 31 56 36C56 41 51 43 47 43" stroke="#2C1A1D" stroke-width="3" stroke-linecap="round"/></svg>`,
+      NO: `<svg viewBox="0 0 64 64" fill="none"><path d="M20 18H44L48 50C48 53 43 56 32 56C21 56 16 53 16 50L20 18Z" stroke="#2C1A1D" stroke-width="3" fill="none"/><path d="M20 28H44" stroke="#EF9A9A" stroke-width="2" stroke-dasharray="2 2"/><path d="M44 26C50 26 54 29 54 34C54 39 49 42 44 42" stroke="#2C1A1D" stroke-width="3"/></svg>`
+    };
+
+    const LABELS = {
+      FRESH: 'Rykende nybrygget kaffe! ☕✨',
+      YES: 'Det er kaffe på kannene ☕',
+      NO: 'Kannene er tomme! 🫗'
+    };
+
+    let state = {
+      status: 'YES',
+      timestamp: Date.now(),
+      note: '',
+      history: []
+    };
+
+    function loadState() {
+      const saved = localStorage.getItem('kaffestatus_data');
+      if (saved) {
+        try {
+          state = JSON.parse(saved);
+        } catch(e){}
+      }
+      render();
+    }
+
+    function saveState() {
+      localStorage.setItem('kaffestatus_data', JSON.stringify(state));
+    }
+
+    function setStatus(type) {
+      const noteVal = document.getElementById('noteInput').value.trim();
+      state.status = type;
+      state.timestamp = Date.now();
+      state.note = noteVal;
+
+      state.history.unshift({
+        status: type,
+        timestamp: Date.now(),
+        note: noteVal
+      });
+      if (state.history.length > 8) state.history.pop();
+
+      document.getElementById('noteInput').value = '';
+
+      // Haptics
+      if (navigator.vibrate) navigator.vibrate(50);
+
+      // Audio
+      if (type === 'FRESH') AudioEngine.playFresh();
+      else if (type === 'YES') AudioEngine.playYes();
+      else AudioEngine.playNo();
+
+      saveState();
+      render();
+    }
+
+    function getRelativeTime(time) {
+      const diffMin = Math.floor((Date.now() - time) / 60000);
+      if (diffMin < 1) return 'Akkurat nå';
+      if (diffMin === 1) return 'For 1 minutt siden';
+      if (diffMin < 60) return `For ${diffMin} minutter siden`;
+      const diffHours = Math.floor(diffMin / 60);
+      return `For ${diffHours} time${diffHours > 1 ? 'r' : ''} siden`;
+    }
+
+    function render() {
+      document.getElementById('statusIcon').innerHTML = ICONS[state.status];
+      let label = LABELS[state.status];
+      if (state.note) label += ` ("${state.note}")`;
+      document.getElementById('statusBadge').innerText = label;
+      document.getElementById('statusTime').innerText = getRelativeTime(state.timestamp);
+
+      // Render History
+      const historyEl = document.getElementById('historyList');
+      if (state.history.length === 0) {
+        historyEl.innerHTML = '<li class="history-item"><span>Ingen historikk ennå</span></li>';
+      } else {
+        historyEl.innerHTML = state.history.map(item => `
+          <li class="history-item">
+            <span class="history-text">${LABELS[item.status]} ${item.note ? '<i>(' + item.note + ')</i>' : ''}</span>
+            <span class="history-time">${getRelativeTime(item.timestamp)}</span>
+          </li>
+        `).join('');
+      }
+    }
+
+    // Auto-update time text every 30s
+    setInterval(() => render(), 30000);
+
+    // Initial Load
+    loadState();
+  </script>
+</body>
+</html>

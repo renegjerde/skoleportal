@@ -1,0 +1,2529 @@
+{
+  "version": "1.2.2",
+  "school": "InspeksjonsVakt",
+  "updatedOn": "2026-10-14",
+  "startDate": "2026-10-19",
+  "effectiveNote": "Planfilnavnet angir fra 19.10.2026.",
+  "alternateRule": "first-even-second-odd",
+  "staff": {
+    "ADDJ": "Addington, Julian Carlos",
+    "ALSR": "Alsaker, René",
+    "BERG": "Berg, Gitte",
+    "BERP": "Bertelsen, Peder",
+    "BIRA": "Birk, Anne",
+    "BIRN": "Birkelund, Normi",
+    "BOGP": "Boge, Paul Johan",
+    "BRUH": "Bruvik, Hege",
+    "BRUM": "Bruvik, Mariann",
+    "DALM": "Dalan, Marit",
+    "ELLT": "Ellingsen, Tone",
+    "EVAD": "Evans, Daniel",
+    "FLAD": "Flad, Daniel",
+    "FLOØ": "Flotve, Øystein",
+    "FLUT": "Fluge, Trine",
+    "GARÅ": "Garberg, Åse",
+    "GJEG": "Gjesdal, Gunn",
+    "GJEL": "Gjerland, Laila Martine",
+    "GJEM": "Gjelsvik, Marte",
+    "GRAI": "Grasdalsmoen, Ingrid T.",
+    "GJER": "Gjerde, René",
+    "HAMF": "Hammer, Frode",
+    "HASI": "Hassal, Inge",
+    "HAUS": "Haugen, Silje",
+    "HENC": "Hennum, Christian",
+    "HERH": "Heradstveit, Hildegunn",
+    "HERM": "Hermansen, Mirjam Randa",
+    "HJAG": "Hjartåker, Gro",
+    "HOLI": "Holt, Ingvild",
+    "JACM": "Jacobsen, Marit",
+    "JOHJ": "Johansen, Jannicke",
+    "KLES": "Klementsen, Samantha",
+    "KLYE": "Klyve, Ebbe",
+    "KONSUL": "Konsulent",
+    "KRUE": "Krukhaug, Eirik",
+    "KRYC": "Krydsby, Charlotte",
+    "LEAL": "Le, Aleksander",
+    "LIEH": "Lien, Heidi Kristoffersen",
+    "LINK": "Lindbjerg, Kristin Kartveit",
+    "LUSL": "Lussand, Linn",
+    "MELL": "Meland, Lena",
+    "MIKO": "Mikkelsen, Ove Steinar",
+    "MONM": "Monclair, Maren",
+    "MØGB": "Møgster, Birgitte",
+    "MUMK": "Muminagic, Keka",
+    "NAUM": "Naustdal, Maria",
+    "ONAT": "Ona, Torstein",
+    "RAKØ": "Raknes, Øyvind",
+    "RAMM": "Ramirez, Miguel Alexander",
+    "SKOP": "Skorpen, Pål Einar",
+    "STEL": "Steine, Leif Haakon",
+    "SØRM": "Sørhaug, Marianne",
+    "STOE": "Storvand, Eivind",
+    "SVEJ": "Sverdrup, Johanne",
+    "SYVO": "Syversen, Oskar",
+    "TORH": "Torheim, Hans Slettebak",
+    "TRAE": "Træen, Elisabeth",
+    "ØKLS": "Økland, Silje",
+    "ØYSE": "Øysæd, Elisabeth",
+    "LIET": "Lie, Tore",
+    "ROLT": "Roll, Tone",
+    "BIRO": "Birkeland, Oda"
+  },
+  "areas": [
+    "Paradis øvre",
+    "Paradis nedre",
+    "Bakplass",
+    "Fana øvre",
+    "Fana nedre",
+    "Lekeplass",
+    "Bingen",
+    "Fotballbanen",
+    "S1",
+    "C1",
+    "L1",
+    "M1",
+    "A2",
+    "B2",
+    "A3",
+    "L3",
+    "F5",
+    "OM6",
+    "FLYT1",
+    "FLYT2"
+  ],
+  "entries": [
+    {
+      "day": 0,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Fana nedre",
+      "codes": [
+        "MØGB"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "S1",
+      "codes": [
+        "SVEJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "C1",
+      "codes": [
+        "ELLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "L1",
+      "codes": [
+        "BIRO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "B2",
+      "codes": [
+        "HJAG"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Paradis øvre / Paradis nedre",
+      "codes": [
+        "GJEL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis nedre",
+      "codes": [
+        "KRUE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Bakplass",
+      "codes": [
+        "ONAT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana øvre",
+      "codes": [
+        "ØYSE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana nedre",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "S1",
+      "codes": [
+        "KLES"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "C1",
+      "codes": [
+        "ELLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "M1",
+      "codes": [
+        "SVEJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A2",
+      "codes": [
+        "BRUM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "B2",
+      "codes": [
+        "MUMK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A3",
+      "codes": [
+        "BERP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "F5",
+      "codes": [
+        "MELL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "OM6",
+      "codes": [
+        "ØKLS"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT1",
+      "codes": [
+        "FLAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT2",
+      "codes": [
+        "GJEM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis øvre",
+      "codes": [
+        "FLAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis nedre",
+      "codes": [
+        "MELL",
+        "BERG"
+      ],
+      "alternating": true
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bakplass",
+      "codes": [
+        "JOHJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana øvre",
+      "codes": [
+        "ALSR"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana nedre",
+      "codes": [
+        "ØYSE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Lekeplass",
+      "codes": [
+        "GJEM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bingen",
+      "codes": [
+        "LEAL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "S1",
+      "codes": [
+        "KLES"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "C1",
+      "codes": [
+        "ELLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "M1",
+      "codes": [
+        "GJER"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A2",
+      "codes": [
+        "BIRN"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "B2",
+      "codes": [
+        "BRUM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A3",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L3",
+      "codes": [
+        "HERH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "OM6",
+      "codes": [
+        "MIKO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT1",
+      "codes": [
+        "FLAD",
+        "ADDJ"
+      ],
+      "alternating": true
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT2",
+      "codes": [
+        "FLOØ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis øvre",
+      "codes": [
+        "GJEG"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fotballbanen",
+      "codes": [
+        "EVAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Paradis nedre",
+      "codes": [
+        "FLAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Bakplass",
+      "codes": [
+        "RAKØ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Fana øvre",
+      "codes": [
+        "FLUT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Fana nedre",
+      "codes": [
+        "BOGP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "S1",
+      "codes": [
+        "KLES"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "C1",
+      "codes": [
+        "ELLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "M1",
+      "codes": [
+        "SVEJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "A2",
+      "codes": [
+        "MUMK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "B2",
+      "codes": [
+        "BRUM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "A3",
+      "codes": [
+        "BERP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "OM6",
+      "codes": [
+        "MIKO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "FLYT1",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "FLYT2",
+      "codes": [
+        "MØGB"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 0,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Paradis øvre",
+      "codes": [
+        "ADDJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Fana nedre",
+      "codes": [
+        "FLOØ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "S1",
+      "codes": [
+        "MIKO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "C1",
+      "codes": [
+        "SVEJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "L1",
+      "codes": [
+        "BIRO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "B2",
+      "codes": [
+        "SØRM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Paradis øvre / Paradis nedre",
+      "codes": [
+        "MØGB"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis nedre",
+      "codes": [
+        "FLAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Bakplass",
+      "codes": [
+        "ONAT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana øvre",
+      "codes": [
+        "HERM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana nedre",
+      "codes": [
+        "JACM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "S1",
+      "codes": [
+        "ELLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "C1",
+      "codes": [
+        "HOLI"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "M1",
+      "codes": [
+        "SVEJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A2",
+      "codes": [
+        "BOGP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "B2",
+      "codes": [
+        "MUMK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A3",
+      "codes": [
+        "BERP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "OM6",
+      "codes": [
+        "MIKO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT1",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT2",
+      "codes": [
+        "STOE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis øvre",
+      "codes": [
+        "ADDJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis nedre",
+      "codes": [
+        "BRUH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bakplass",
+      "codes": [
+        "BIRA"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana øvre",
+      "codes": [
+        "LUSL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana nedre",
+      "codes": [
+        "GRAI"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Lekeplass",
+      "codes": [
+        "KRYC"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bingen",
+      "codes": [
+        "KLYE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "S1",
+      "codes": [
+        "HAUS"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "C1",
+      "codes": [
+        "HOLI"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L1",
+      "codes": [
+        "BIRO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "M1",
+      "codes": [
+        "GARÅ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A2",
+      "codes": [
+        "SKOP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "B2",
+      "codes": [
+        "HJAG"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A3",
+      "codes": [
+        "LINK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L3",
+      "codes": [
+        "GJEL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "OM6",
+      "codes": [
+        "LEAL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT1",
+      "codes": [
+        "FLUT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT2",
+      "codes": [
+        "STEL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis øvre",
+      "codes": [
+        "ONAT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 1,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fotballbanen",
+      "codes": [
+        "LIET"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Fana nedre",
+      "codes": [
+        "FLUT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "S1",
+      "codes": [
+        "SVEJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "C1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "L1",
+      "codes": [
+        "BIRO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "B2",
+      "codes": [
+        "BIRN"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Paradis øvre / Paradis nedre",
+      "codes": [
+        "LUSL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis nedre",
+      "codes": [
+        "ØYSE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Bakplass",
+      "codes": [
+        "BIRA"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana øvre",
+      "codes": [
+        "BERG"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana nedre",
+      "codes": [
+        "ALSR"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "S1",
+      "codes": [
+        "KLES"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "C1",
+      "codes": [
+        "GJER"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "M1",
+      "codes": [
+        "SVEJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A2",
+      "codes": [
+        "BOGP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "B2",
+      "codes": [
+        "BIRN"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A3",
+      "codes": [
+        "ROLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "F5",
+      "codes": [
+        "MELL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "OM6",
+      "codes": [
+        "MIKO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT1",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT2",
+      "codes": [
+        "ADDJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis øvre",
+      "codes": [
+        "HERM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis nedre",
+      "codes": [
+        "JACM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bakplass",
+      "codes": [
+        "EVAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana øvre",
+      "codes": [
+        "ADDJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana nedre",
+      "codes": [
+        "HENC"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Lekeplass",
+      "codes": [
+        "GJER"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bingen",
+      "codes": [
+        "JOHJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "S1",
+      "codes": [
+        "KLES"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "C1",
+      "codes": [
+        "HOLI"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "M1",
+      "codes": [
+        "NAUM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A2",
+      "codes": [
+        "SKOP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "B2",
+      "codes": [
+        "MUMK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A3",
+      "codes": [
+        "LINK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L3",
+      "codes": [
+        "ROLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "OM6",
+      "codes": [
+        "LEAL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT1",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT2",
+      "codes": [
+        "STOE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis øvre",
+      "codes": [
+        "GRAI"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fotballbanen",
+      "codes": [
+        "LIET"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Paradis nedre",
+      "codes": [
+        "KRUE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Bakplass",
+      "codes": [
+        "HERH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "OM6",
+      "codes": [
+        "ØKLS"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "FLYT1",
+      "codes": [
+        "GJEM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Paradis øvre",
+      "codes": [
+        "HERM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 2,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Fana øvre / Fana nedre",
+      "codes": [
+        "TRAE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Fana nedre",
+      "codes": [
+        "RAKØ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "S1",
+      "codes": [
+        "MIKO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "C1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "L1",
+      "codes": [
+        "BIRO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "B2",
+      "codes": [
+        "SØRM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Paradis øvre / Paradis nedre",
+      "codes": [
+        "GJEL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis nedre",
+      "codes": [
+        "HAUS"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Bakplass",
+      "codes": [
+        "FLAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana øvre",
+      "codes": [
+        "TORH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana nedre",
+      "codes": [
+        "MØGB"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "S1",
+      "codes": [
+        "ELLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "C1",
+      "codes": [
+        "KLES"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "M1",
+      "codes": [
+        "ROLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A2",
+      "codes": [
+        "BOGP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "B2",
+      "codes": [
+        "MUMK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A3",
+      "codes": [
+        "BERP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "OM6",
+      "codes": [
+        "MIKO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT1",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT2",
+      "codes": [
+        "GJEM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis øvre",
+      "codes": [
+        "ADDJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis nedre",
+      "codes": [
+        "DALM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bakplass",
+      "codes": [
+        "LUSL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana øvre",
+      "codes": [
+        "TRAE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana nedre",
+      "codes": [
+        "ALSR"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Lekeplass",
+      "codes": [
+        "ADDJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bingen",
+      "codes": [
+        "BERP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "S1",
+      "codes": [
+        "LIEH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "C1",
+      "codes": [
+        "KLES"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L1",
+      "codes": [
+        "BIRO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "M1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A2",
+      "codes": [
+        "BOGP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "B2",
+      "codes": [
+        "HJAG"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A3",
+      "codes": [
+        "TORH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L3",
+      "codes": [
+        "FLAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "OM6",
+      "codes": [
+        "ØKLS"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT1",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT2",
+      "codes": [
+        "MØGB"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis øvre",
+      "codes": [
+        "GJEG"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fotballbanen",
+      "codes": [
+        "HENC"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Paradis nedre",
+      "codes": [
+        "KRYC"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Bakplass",
+      "codes": [
+        "SKOP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "S1",
+      "codes": [
+        "ELLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "C1",
+      "codes": [
+        "KLES"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "M1",
+      "codes": [
+        "ROLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "A2",
+      "codes": [
+        "BOGP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "B2",
+      "codes": [
+        "MUMK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "A3",
+      "codes": [
+        "BERP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "OM6",
+      "codes": [
+        "MIKO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "FLYT1",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "FLYT2",
+      "codes": [
+        "ADDJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Paradis øvre",
+      "codes": [
+        "FLAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 3,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Fana øvre / Fana nedre",
+      "codes": [
+        "TORH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Fana nedre",
+      "codes": [
+        "RAKØ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "S1",
+      "codes": [
+        "GARÅ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "C1",
+      "codes": [
+        "SVEJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "L1",
+      "codes": [
+        "NAUM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "B2",
+      "codes": [
+        "BIRN"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "08:15",
+      "end": "08:30",
+      "area": "Paradis øvre / Paradis nedre",
+      "codes": [
+        "DALM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis nedre",
+      "codes": [
+        "GJEL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Bakplass",
+      "codes": [
+        "BOGP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana øvre",
+      "codes": [
+        "ADDJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Fana nedre",
+      "codes": [
+        "HERM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "S1",
+      "codes": [
+        "KLES"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "C1",
+      "codes": [
+        "ELLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "M1",
+      "codes": [
+        "SVEJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A2",
+      "codes": [
+        "SKOP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "B2",
+      "codes": [
+        "MUMK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "A3",
+      "codes": [
+        "BERP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "L3",
+      "codes": [
+        "FLAD"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "F5",
+      "codes": [
+        "MELL"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "OM6",
+      "codes": [
+        "ØKLS"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT1",
+      "codes": [
+        "TORH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "FLYT2",
+      "codes": [
+        "MØGB"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "09:30",
+      "end": "09:45",
+      "area": "Paradis øvre",
+      "codes": [
+        "FLUT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis nedre",
+      "codes": [
+        "BIRA"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bakplass",
+      "codes": [
+        "ADDJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana øvre",
+      "codes": [
+        "BERG"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fana nedre",
+      "codes": [
+        "KRUE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Lekeplass",
+      "codes": [
+        "FLOØ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Bingen",
+      "codes": [
+        "LIEH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "S1",
+      "codes": [
+        "ELLT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "C1",
+      "codes": [
+        "GARÅ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L1",
+      "codes": [
+        "SYVO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "M1",
+      "codes": [
+        "NAUM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A2",
+      "codes": [
+        "DALM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "B2",
+      "codes": [
+        "MUMK"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "A3",
+      "codes": [
+        "BERP"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "L3",
+      "codes": [
+        "TORH"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "OM6",
+      "codes": [
+        "TRAE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT1",
+      "codes": [
+        "RAMM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "FLYT2",
+      "codes": [
+        "GJEM"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Paradis øvre",
+      "codes": [
+        "ONAT"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "11:10",
+      "end": "11:40",
+      "area": "Fotballbanen",
+      "codes": [
+        "RAKØ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Paradis nedre",
+      "codes": [
+        "KRUE"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Bakplass",
+      "codes": [
+        "MIKO"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Paradis øvre",
+      "codes": [
+        "JOHJ"
+      ],
+      "alternating": false
+    },
+    {
+      "day": 4,
+      "start": "12:40",
+      "end": "12:55",
+      "area": "Fana øvre / Fana nedre",
+      "codes": [
+        "GRAI"
+      ],
+      "alternating": false
+    }
+  ],
+  "source": "Inspeksjonsplan fra 19.10.26 – Ferdigstilt med samlet fotballbane.pdf"
+}

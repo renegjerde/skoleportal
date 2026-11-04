@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="no">
+<head>
+    <link rel="stylesheet" href="../style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f35">
+  <title>InspeksjonsVakt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div style="text-align:center; margin: 15px;"><a href="../index.html" style="text-decoration:none; background:rgba(0,0,0,0.1); color:inherit; padding:8px 16px; border-radius:20px; font-size:14px; font-weight:bold;">⬅ Tilbake til Hovedmeny</a></div>
+  <header class="topbar">
+    <div class="brand-mark">IV</div>
+    <div class="brand-copy"><div class="brand">InspeksjonsVakt</div><div class="tagline">Din personlige inspeksjonsoversikt</div></div>
+    <span class="version">v1.2.2</span>
+  </header>
+  <main>
+    <section class="intro">
+      <div>
+        <p class="eyebrow">PARADIS SKOLE · INSPEKSJONSPLAN</p>
+        <h1>Din skoleuke.<br><em>Din inspeksjonsoversikt.</em></h1>
+        <p class="intro-text">Velg navnet ditt én gang. Så finner InspeksjonsVakt neste inspeksjon og viser hele ukeplanen din.</p>
+        <p id="planMeta" class="plan-meta">Laster inspeksjonsplan …</p>
+      </div>
+      <div class="hero-symbol" aria-hidden="true">◷</div>
+    </section>
+
+    <section class="panel person-panel">
+      <div class="panel-heading"><div class="step">01</div><div><p class="eyebrow">PERSONLIG OVERSIKT</p><h2>Hvem er du?</h2></div></div>
+      <div class="person-controls">
+        <select id="personSelect" aria-label="Velg navnet ditt"><option value="">Velg navnet ditt …</option></select>
+        <button id="favoriteBtn" class="star-button" type="button" title="Lagre som favoritt" aria-label="Lagre som favoritt">☆</button>
+      </div>
+      <p class="small-note">Navn vises i formatet Etternavn, Fornavn. Favorittvalget lagres på denne enheten.</p>
+    </section>
+
+    <section id="dashboard" class="dashboard hidden">
+      <div class="next-heading">
+        <div><p class="eyebrow">DIN NESTE INSPEKSJON</p><h2 id="nextDate">—</h2></div>
+        <div class="next-clock">◷</div>
+      </div>
+      <div class="next-card">
+        <div class="next-time" id="nextTime">—</div>
+        <div class="next-area-label">OMRÅDE</div>
+        <div class="next-area" id="nextArea">—</div>
+        <div id="countdown" class="countdown"></div>
+      </div>
+      <div class="week-box">
+        <div class="week-header">
+          <div><p class="eyebrow">DIN UKEPLAN</p><h3 id="weekTitle">Denne uken</h3></div>
+          <div class="week-controls">
+            <button id="prevWeek" class="week-arrow" aria-label="Forrige uke">‹</button>
+            <button id="currentWeek" class="week-current">Denne uken</button>
+            <button id="nextWeek" class="week-arrow" aria-label="Neste uke">›</button>
+          </div>
+        </div>
+        <div id="weekGrid" class="week-grid"></div>
+        <p class="week-footnote">Ved koder med skråstrek brukes første kode i partallsuker og andre kode i oddetallsuker, slik planen er tolket.</p>
+      </div>
+      <div class="upcoming-block">
+        <div class="block-heading"><div class="step">02</div><h3>Kommende inspeksjoner</h3></div>
+        <div id="upcomingList" class="upcoming-list"></div>
+      </div>
+    </section>
+
+    <section id="unknownNotice" class="notice hidden" role="status">
+      <span class="notice-icon">!</span><div><strong>Navnekoder må avklares</strong><p id="unknownText"></p></div>
+    </section>
+
+    <details class="admin-panel" id="adminPanel">
+      <summary><span class="admin-icon">⚙</span><span><strong>Administrasjon</strong><small>Oppdater inspeksjonsplanen når skolen får en ny PDF</small></span><span class="summary-chevron">⌄</span></summary>
+      <div class="admin-content">
+        <div class="admin-step"><span>1</span><div><strong>Last opp ny inspeksjonsplan</strong><p>PDF-en bør ha samme tabelloppsett som planen fra Paradis skole. Appen leser tekst fra tabellen; skannede bildefiler kan ikke leses automatisk.</p></div></div>
+        <label class="upload-box" for="pdfInput"><span class="upload-symbol">↑</span><strong>Velg PDF-fil</strong><small id="pdfFileName">Ingen fil valgt</small><input id="pdfInput" type="file" accept="application/pdf,.pdf"></label>
+        <div class="effective-row"><label for="startDateInput">Planen gjelder fra (mandag)</label><input id="startDateInput" type="date" value="2026-10-19"></div>
+        <button id="parsePdfBtn" class="button-primary" type="button" disabled>Les PDF og erstatt plan</button>
+        <p id="parseStatus" class="status-text"></p>
+        <div class="admin-divider"></div>
+        <div class="admin-step"><span>2</span><div><strong>Kontroller ukjente navnekoder</strong><p>Disse kodene finnes i inspeksjonsplanen, men ikke i navnelisten. Fyll inn navn når de er avklart.</p></div></div>
+        <div id="unknownEditor" class="unknown-editor"></div>
+        <button id="saveNamesBtn" class="button-secondary" type="button">Lagre navneoppslag</button>
+        <div class="admin-divider"></div>
+        <div class="admin-step"><span>3</span><div><strong>Publiser den nye planen til alle</strong><p>Last ned <code>plan.json</code> og erstatt filen med samme navn i GitHub-repositoryet. Da får alle brukerne den samme planen etter at nettsiden er oppdatert.</p></div></div>
+        <div class="admin-actions">
+          <button id="exportPlanBtn" class="button-primary" type="button">Last ned plan.json</button>
+          <button id="restorePlanBtn" class="button-secondary" type="button">Forkast lokale endringer</button>
+        </div>
+        <p class="admin-warning"><strong>Viktig om deling:</strong> Planen inneholder ansattes navn og hvor/når de har inspeksjon. Ikke legg <code>plan.json</code> i et offentlig GitHub-repository uten at skolen har godkjent offentlig publisering. GitHub Pages har ikke innlogging i denne løsningen.</p>
+      </div>
+    </details>
+
+    <footer>InspeksjonsVakt <span>•</span> v1.2.2 <span>•</span> Personlige favoritter lagres lokalt</footer>
+  </main>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

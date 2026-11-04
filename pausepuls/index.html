@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="no">
+<head>
+    <link rel="stylesheet" href="../style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#4f46e5">
+<title>PausePuls – pauseaktiviteter for lærere</title>
+<style>
+:root{--ink:#172033;--muted:#667085;--line:#e5e7eb;--primary:#4f46e5;--bg:#f7f8fc;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #a5b4fc;outline-offset:2px}
+.wrap{max-width:1120px;margin:auto;padding:24px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:28px}.brand{display:flex;gap:12px;align-items:center}.logo{display:grid;place-items:center;background:var(--primary);color:white;border-radius:15px;width:48px;height:48px;font-size:25px}.brand h1{margin:0;font-size:23px;letter-spacing:-.6px}.sub{color:var(--muted);font-size:14px}.btn{border:1px solid #d0d5dd;background:white;color:var(--ink);padding:10px 15px;border-radius:12px;font-weight:650}.btn.primary{background:var(--primary);border-color:var(--primary);color:white}.btn:hover{filter:brightness(.97)}.hero h2{font-size:clamp(26px,4vw,36px);letter-spacing:-1px;margin:0}.hero p{margin:5px 0 22px;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}.tile{border:2px solid transparent;border-radius:15px;padding:14px;text-align:left;font-weight:700;min-height:94px}.tile span{display:block;font-size:25px;margin-bottom:5px}.tile[data-cat="Bevegelse"]{background:#e0f2fe;color:#075985}.tile[data-cat="Hjernetrim"]{background:#fce7f3;color:#9d174d}.tile[data-cat="Samarbeid"]{background:#d1fae5;color:#065f46}.tile[data-cat="Ro"]{background:#ede9fe;color:#5b21b6}.tile.active{border-color:var(--primary);box-shadow:0 0 0 2px #c7d2fe}
+.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;background:white;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:15px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}.field select,.field input{width:100%;border:1px solid #d0d5dd;border-radius:10px;padding:10px;background:white;color:var(--ink)}
+.random{width:100%;margin:0 0 25px;padding:13px;border:0;border-radius:12px;background:var(--primary);color:white;font-weight:750}.heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.heading h3{margin:0;font-size:20px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;text-align:left;transition:.15s}.card:hover{border-color:#a5b4fc;transform:translateY(-1px)}.cardtop{display:flex;justify-content:space-between;gap:8px;align-items:center}.chip{display:inline-block;border-radius:99px;background:#eef2ff;color:#4338ca;padding:4px 9px;font-size:12px;font-weight:750}.star{border:0;background:transparent;color:#d97706;font-size:23px;padding:0 4px}.card h4{margin:10px 0 4px;font-size:17px}.empty{padding:35px;text-align:center;color:var(--muted);display:none}.panel{margin-top:22px;background:#eef2ff;border:1px solid #e0e7ff;border-radius:16px;padding:17px}.panel h3{margin:0 0 4px}.panel p{margin:0 0 12px;color:#4338ca;font-size:14px}.panel .row{display:flex;gap:8px;flex-wrap:wrap}.detail{display:none;background:white;border:1px solid var(--line);border-radius:22px;padding:clamp(18px,4vw,36px)}.back{margin-bottom:16px}.detail h2{font-size:clamp(27px,4vw,38px);line-height:1.15;margin:12px 0}.meta{color:var(--muted);font-size:14px;margin-bottom:23px}.instructions{background:#eef2ff;border-radius:16px;padding:18px;margin-bottom:18px}.instructions h3{margin:0 0 8px;font-size:16px}.instructions p{margin:0;line-height:1.7}.timerlabel{text-align:center;color:var(--muted);font-size:13px;font-weight:700}.timer{font-size:clamp(54px,10vw,82px);font-weight:800;letter-spacing:-4px;text-align:center;font-variant-numeric:tabular-nums;margin:0}.bar{height:6px;border-radius:99px;background:#e5e7eb;overflow:hidden;margin:0 auto 20px;max-width:440px}.bar div{height:100%;background:#6366f1;width:100%;transition:width .3s}.controls{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.done{display:none;text-align:center;background:#d1fae5;color:#065f46;border-radius:12px;padding:12px;margin-top:18px;font-weight:700}.ai{display:none;margin-top:18px;background:white;border:1px solid var(--line);border-radius:16px;padding:18px}.ai textarea{width:100%;border:1px solid #d0d5dd;border-radius:10px;padding:10px;min-height:75px}.ai p{color:var(--muted);font-size:14px}.generated{white-space:pre-wrap;background:#f8fafc;border-radius:12px;padding:14px;margin-top:12px;display:none}.foot{color:var(--muted);font-size:12px;text-align:center;margin:25px 0 5px}
+@media(max-width:760px){.wrap{padding:15px}.tiles{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.cards{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.top{align-items:flex-start}.brand h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div style="text-align:center; margin: 15px;"><a href="../index.html" style="text-decoration:none; background:rgba(0,0,0,0.1); color:inherit; padding:8px 16px; border-radius:20px; font-size:14px; font-weight:bold;">⬅ Tilbake til Hovedmeny</a></div>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><div class="logo">⚡</div><div><h1>PausePuls</h1><div class="sub">Små pauser. Ny energi.</div></div></div>
+ <button class="btn" id="favoritesToggle">☆ Favoritter</button>
+</header>
+<main>
+<section id="home">
+ <div class="hero"><h2>Hva trenger klassen nå?</h2><p>Finn en aktivitet – og kom i gang på sekunder.</p></div>
+ <div class="tiles">
+  <button class="tile" data-cat="Bevegelse"><span>🏃</span>Bevegelse</button>
+  <button class="tile" data-cat="Hjernetrim"><span>🧠</span>Hjernetrim</button>
+  <button class="tile" data-cat="Samarbeid"><span>🤝</span>Samarbeid</button>
+  <button class="tile" data-cat="Ro"><span>🌿</span>Finn roen</button>
+ </div>
+ <div class="filters">
+  <div class="field"><label for="grade">Klassetrinn</label><select id="grade"><option value="all">Alle trinn</option><option value="1-4">1.–4. trinn</option><option value="5-7">5.–7. trinn</option></select></div>
+  <div class="field"><label for="duration">Varighet</label><select id="duration"><option value="all">Alle varigheter</option><option value="short">1–2 minutter</option><option value="medium">3–5 minutter</option><option value="long">6–10 minutter</option></select></div>
+  <div class="field"><label for="kind">Aktivitetstype</label><select id="kind"><option value="all">Alle typer</option><option>Bevegelse</option><option>Hjernetrim</option><option>Samarbeid</option><option>Ro</option></select></div>
+  <div class="field"><label for="search">Søk</label><input id="search" placeholder="Søk etter aktivitet…"></div>
+ </div>
+ <button class="random" id="random">⤨ Trekk en tilfeldig aktivitet</button>
+ <div class="heading"><h3 id="listTitle">Aktiviteter</h3><span class="sub" id="count"></span></div>
+ <div class="cards" id="cards"></div><div class="empty" id="empty">Ingen aktiviteter passer filtrene. Prøv å endre dem.</div>
+ <section class="panel"><h3>✨ Lag en ny aktivitet</h3><p>Beskriv hva du trenger, og få et forslag du kan bruke i klasserommet. AI-generering krever senere tilkobling til en AI-tjeneste.</p><div class="row"><button class="btn" id="showAi">Åpne aktivitetsgenerator</button></div></section>
+ <section class="ai" id="ai"><h3>Aktivitetsgenerator</h3><p>Lag et utkast lokalt med en enkel aktivitetsmal. Ingen AI-tjeneste er koblet til i denne første versjonen.</p><div class="field"><label for="prompt">Hva ønsker du?</label><textarea id="prompt" placeholder="For eksempel: En rolig 3-minutters aktivitet for 2. trinn etter friminuttet."></textarea></div><div class="row" style="margin-top:10px"><button class="btn primary" id="generate">Lag aktivitetsutkast</button><button class="btn" id="hideAi">Lukk</button></div><div class="generated" id="generated"></div></section>
+</section>
+<section id="detail" class="detail">
+ <button class="btn back" id="back">← Tilbake til aktivitetsbanken</button>
+ <div class="cardtop"><span class="chip" id="dCat"></span><button class="star" id="dStar" aria-label="Lagre som favoritt">☆</button></div>
+ <h2 id="dTitle"></h2><div class="meta" id="dMeta"></div>
+ <div class="instructions"><h3>Slik gjør dere</h3><p id="dInstructions"></p></div>
+ <div class="timerlabel">NEDTELLING</div><div class="timer" id="timer">03:00</div><div class="bar"><div id="barFill"></div></div>
+ <div class="controls"><button class="btn primary" id="start">▶ Start</button><button class="btn" id="reset">↺ Start på nytt</button><button class="btn" id="fullscreen">⛶ Fullskjerm</button></div>
+ <div class="done" id="done">🎉 Bra jobbet! Pausen er ferdig.</div>
+</section>
+</main>
+<div class="foot">PausePuls · Første versjon · Aktivitetene kan tilpasses klassen og rommet.</div>
+</div>
+<script>
+const activities=[
+[1,"Frys som en statue","Bevegelse",3,"1-4","Sett på litt musikk eller klapp en rytme. Elevene beveger seg fritt på plassen sin. Når musikken stopper eller læreren sier «frys», står alle helt stille som en statue. Varier med morsomme positurer!"],
+[2,"Speilbildet","Bevegelse",3,"1-7","Elevene jobber i par. Én er leder og gjør langsomme bevegelser med armer, hode og kropp. Den andre er speil og følger så nøyaktig som mulig. Bytt etter ett minutt."],
+[3,"Kryss og klapp","Bevegelse",2,"1-4","Stå ved pulten. Klapp høyre hånd mot venstre kne og venstre hånd mot høyre kne. Øk tempoet gradvis. Avslutt med ti rolige tåhev eller hopp på stedet."],
+[4,"Dyrebevegelser","Bevegelse",4,"1-4","Læreren roper et dyr. Elevene beveger seg som dyret på stedet: hopp som en frosk, strekk deg som en katt, vagg som en pingvin eller fly som en fugl. Velg bevegelser som passer rommet."],
+[5,"Strekk og nå","Bevegelse",3,"1-7","Strekk armene mot taket, len deg forsiktig til hver side, rull skuldrene og rist løs i hender og føtter. Gjør hver bevegelse langsomt og uten å presse."],
+[6,"Usynlig hoppetau","Bevegelse",2,"1-7","Alle hopper rolig på stedet som om de har et usynlig hoppetau. Varier mellom små hopp, ettbeins-hopp og «tauet går sakte». Alternativ: gå på stedet."],
+[7,"Luftdirigent","Bevegelse",3,"1-7","Læreren dirigerer klassen med armene: høyt betyr strekk, lavt betyr bøy knærne, raskt betyr små bevegelser og stopp betyr frys. Elevene følger dirigenten."],
+[8,"Balanseutfordringen","Bevegelse",3,"1-7","Stå bak stolen. Prøv å balansere på én fot i fem sekunder, bytt fot. Prøv deretter å stå på tå, og avslutt med å gå rolig på stedet. Hold gjerne i stolen ved behov."],
+[9,"Telle til tjue","Hjernetrim",3,"1-7","Klassen skal telle fra 1 til 20. Hvem som helst kan si neste tall, men hvis to elever sier et tall samtidig, starter dere på nytt fra 1. Ingen avtalt rekkefølge!"],
+[10,"Ja eller nei?","Hjernetrim",3,"1-7","Læreren stiller spørsmål. Elevene svarer med en bevegelse: stå hvis svaret er ja, sett deg hvis svaret er nei. Eksempel: «Er en fisk et pattedyr?» eller «Er 7 større enn 5?»"],
+[11,"Kategori på rappen","Hjernetrim",3,"1-7","Velg en kategori, for eksempel dyr, mat eller land. Klassen nevner ord etter tur uten å gjenta. Se hvor mange dere klarer på ett minutt."],
+[12,"Hva er borte?","Hjernetrim",3,"1-4","Elevene lukker øynene. Læreren fjerner eller skjuler en synlig ting i rommet. Elevene åpner øynene og prøver å finne ut hva som mangler. Kan også gjøres med ting på tavla."],
+[13,"Baklengs telling","Hjernetrim",2,"1-7","Tell baklengs fra 20 til 0 sammen. For eldre elever: start på 100 og tell bakover med 7, eller bruk tall som passer nivået."],
+[14,"Ordlenke","Hjernetrim",4,"1-7","Første elev sier et ord. Neste sier et nytt ord som begynner på siste bokstav i det forrige. Prøv å holde ordkjeden i gang uten gjentakelser."],
+[15,"Rytmeminne","Hjernetrim",3,"1-7","Læreren klapper en kort rytme. Klassen gjentar. Legg til ett klapp eller en lyd hver runde. Se hvor lang rytme dere klarer å huske."],
+[16,"Sant eller usant?","Hjernetrim",3,"1-7","Læreren sier påstander. Elevene viser tommel opp for sant og tommel ned for usant. Bruk morsomme eller faglige påstander. Be gjerne noen forklare svaret."],
+[17,"Usynlig ball","Samarbeid",4,"1-7","Klassen sender en usynlig ball mellom seg. Den som sender, lager en lyd og en bevegelse. Mottakeren gjentar lyd og bevegelse før ballen sendes videre. Hold flyten i gang!"],
+[18,"Felles rytme","Samarbeid",3,"1-7","Læreren starter en enkel rytme med klapp og knips. Hele klassen følger. Legg til én lyd eller bevegelse om gangen. Klarer dere å holde felles rytme i ett helt minutt?"],
+[19,"Bytt plass hvis …","Samarbeid",5,"1-7","Læreren sier «Bytt plass hvis du liker pizza», «… har et kjæledyr» eller «… liker å lese». Elevene som kjenner seg igjen, bytter plass rolig. Uten ledige plasser: gjør en bevegelse ved pulten."],
+[20,"Klassepuls","Samarbeid",4,"1-7","Klassen skal sammen gjennomføre 20 rolige knebøy, 30 klapp eller 40 tåhev. Fordel tellingen slik at alle bidrar. Velg en bevegelse som passer elevene."],
+[21,"Tell uten å snakke","Samarbeid",3,"5-7","Klassen skal telle til 15, men ingen kan avtale rekkefølge eller si to tall på rad. Hvis flere snakker samtidig, begynner dere på nytt. Øv på å lytte og vente."],
+[22,"Historien bygger seg","Samarbeid",5,"1-7","Læreren starter en historie med én setning. Hver elev legger til én setning. Prøv å lage en fortelling med en tydelig begynnelse, et problem og en morsom slutt."],
+[23,"Pust som en blomst","Ro",3,"1-4","Sitt godt på stolen. Tenk at du lukter på en blomst: pust rolig inn gjennom nesen. Tenk at du blåser på et stearinlys: pust langsomt ut. Gjenta fem ganger uten å presse pusten."],
+[24,"Skulderavspenning","Ro",2,"1-7","Trekk skuldrene rolig opp mot ørene. Hold et øyeblikk, og slipp dem ned. Rull skuldrene bakover fem ganger. Strekk armene forsiktig opp mot taket og senk dem langsomt."],
+[25,"Stille utfordring","Ro",2,"1-7","Se om klassen klarer å være helt stille i 30 sekunder. Deretter finner alle tre ting de kan se, to ting de kan høre og én ting de kan kjenne. Avslutt med et rolig smil."],
+[26,"Rolig kroppsskanning","Ro",4,"1-7","Sitt behagelig. Legg merke til føttene mot gulvet, hendene i fanget og skuldrene. Slipp spenningen i ansiktet. Ingen trenger å lukke øynene."],
+[27,"Tegn i lufta","Ro",3,"1-4","Bruk pekefingeren til å tegne en stor sirkel, en bølge og en stjerne i lufta. Følg bevegelsen med blikket. Gjør bevegelsene sakte og rolig."],
+[28,"Lytt til rommet","Ro",2,"1-7","Sitt stille og lytt. Hvilke lyder kan du høre nær deg? Hvilke lyder er langt borte? Etter et halvt minutt kan elevene dele én lyd de la merke til."],
+[29,"Fingermassasje","Ro",3,"1-7","Bruk den ene hånden til å stryke forsiktig over fingrene på den andre. Bytt hånd. Beveg håndleddene rolig og la hendene hvile i fanget."],
+[30,"Rolig tallpust","Ro",3,"5-7","Pust inn mens du teller rolig til tre, og pust ut mens du teller til fire. Gjenta i ditt eget tempo. Hvis det føles ubehagelig, pust helt vanlig."]
+].map(a=>({id:a[0],title:a[1],cat:a[2],mins:a[3],grade:a[4],instructions:a[5]}));
+const $=id=>document.getElementById(id);let category='all',favOnly=false,current=null,remaining=0,total=0,running=false,interval=null;
+let favorites=new Set();try{favorites=new Set(JSON.parse(localStorage.getItem('pausepuls-favs')||'[]'))}catch(e){}
+function saveFavs(){try{localStorage.setItem('pausepuls-favs',JSON.stringify([...favorites]))}catch(e){}}
+function filtered(){const g=$('grade').value,d=$('duration').value,k=$('kind').value,q=$('search').value.trim().toLowerCase();return activities.filter(a=>(category==='all'||a.cat===category)&&(k==='all'||a.cat===k)&&(g==='all'||a.grade==='1-7'||a.grade===g)&&(d==='all'||(d==='short'?a.mins<=2:d==='medium'?a.mins>=3&&a.mins<=5:a.mins>=6))&&(!favOnly||favorites.has(a.id))&&(!q||(a.title+' '+a.cat+' '+a.instructions).toLowerCase().includes(q)))}
+function render(){const list=filtered();$('count').textContent=list.length+' aktiviteter';$('listTitle').textContent=favOnly?'Favoritter':'Aktiviteter';$('empty').style.display=list.length?'none':'block';$('cards').innerHTML=list.map(a=>`<button class="card" data-id="${a.id}"><div class="cardtop"><span class="chip">${a.cat}</span><span class="sub">${a.mins} min</span></div><h4>${escapeHtml(a.title)}</h4><div class="sub">${a.grade==='1-4'?'1.–4. trinn':a.grade==='5-7'?'5.–7. trinn':'1.–7. trinn'}</div></button>`).join('');$('cards').querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>openActivity(+b.dataset.id))}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function stop(){clearInterval(interval);interval=null;running=false;$('start').textContent='▶ Start'}
+function fmt(n){return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')}
+function update(){ $('timer').textContent=fmt(remaining);$('barFill').style.width=(total?100*remaining/total:0)+'%';if(remaining<=0){stop();$('done').style.display='block';$('start').textContent='✓ Ferdig'}}
+function openActivity(id){stop();current=activities.find(a=>a.id===id);total=current.mins*60;remaining=total;$('home').style.display='none';$('detail').style.display='block';$('dCat').textContent=current.cat;$('dTitle').textContent=current.title;$('dMeta').textContent=current.mins+' minutter · '+(current.grade==='1-4'?'1.–4. trinn':current.grade==='5-7'?'5.–7. trinn':'1.–7. trinn');$('dInstructions').textContent=current.instructions;$('dStar').textContent=favorites.has(id)?'★':'☆';$('done').style.display='none';update()}
+function start(){if(running)return;if(remaining<=0){remaining=total;$('done').style.display='none'}running=true;$('start').textContent='Ⅱ Pause';interval=setInterval(()=>{remaining=Math.max(0,remaining-1);update()},1000)}
+$('random').onclick=()=>{const list=filtered();if(!list.length)return alert('Ingen aktiviteter passer filtrene.');openActivity(list[Math.floor(Math.random()*list.length)].id)};
+document.querySelectorAll('.tile').forEach(b=>b.onclick=()=>{category=category===b.dataset.cat?'all':b.dataset.cat;document.querySelectorAll('.tile').forEach(x=>x.classList.toggle('active',x.dataset.cat===category));$('kind').value='all';render()});
+['grade','duration','kind','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));
+$('favoritesToggle').onclick=()=>{favOnly=!favOnly;$('favoritesToggle').textContent=favOnly?'★ Vis alle':'☆ Favoritter';render()};
+$('dStar').onclick=()=>{if(!current)return;favorites.has(current.id)?favorites.delete(current.id):favorites.add(current.id);saveFavs();$('dStar').textContent=favorites.has(current.id)?'★':'☆';render()};
+$('back').onclick=()=>{stop();$('detail').style.display='none';$('home').style.display='block';render()};
+$('start').onclick=()=>running?stop():start();
+$('reset').onclick=()=>{stop();remaining=total;$('done').style.display='none';update()};
+$('fullscreen').onclick=()=>{const el=$('detail');if(el.requestFullscreen)el.requestFullscreen().catch(()=>{});};
+$('showAi').onclick=()=>{$('ai').style.display='block';$('prompt').focus()};
+$('hideAi').onclick=()=>{$('ai').style.display='none'};
+$('generate').onclick=()=>{const p=$('prompt').value.trim();if(!p){$('prompt').focus();return}const out='AKTIVITETSUTKAST\\n\\nØnske: '+p+'\\n\\n1. Samle elevene og forklar at alle kan delta på sitt nivå.\\n2. Gjennomfør en enkel aktivitet med tydelig start og stopp.\\n3. Avslutt med en kort rolig overgang tilbake til arbeidet.\\n\\nDette er en malbasert skisse, ikke et AI-generert forslag. Tilpass instruksjonene og bevegelsene til gruppen.';$('generated').textContent=out;$('generated').style.display='block'};
+render();
+</script>
+</body>
+</html>

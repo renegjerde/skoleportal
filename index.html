@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lærerverktøy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .portal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .app-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 2px solid transparent;
+            transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-color: rgba(0,0,0,0.1);
+        }
+        .app-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .app-desc {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="portal-container">
+        <h1>Verktøykasse for Skolen</h1>
+        <p style="opacity: 0.8; font-size: 1.1rem;">Alt du trenger på ett sted. Velg en app under for å starte.</p>
+
+        <div class="app-grid">
+            <a href="kaffestatus/index.html" class="app-card">
+                <div class="app-title">☕ Kaffestatus</div>
+                <div class="app-desc">Hold oversikt over kaffekokingen.</div>
+            </a>
+
+            <a href="inspeksjonsvakt/index.html" class="app-card">
+                <div class="app-title">👀 Inspeksjonsvakt</div>
+                <div class="app-desc">Vaktoversikt og planlegging for uken.</div>
+            </a>
+
+            <a href="pausepuls/index.html" class="app-card">
+                <div class="app-title">🧘 PausePuls</div>
+                <div class="app-desc">Verktøy for å huske viktige pustepauser.</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
