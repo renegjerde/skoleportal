@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="no">
 <head>
-    <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#173f35">
@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div style="text-align:center; margin: 15px;"><a href="../index.html" style="text-decoration:none; background:rgba(0,0,0,0.1); color:inherit; padding:8px 16px; border-radius:20px; font-size:14px; font-weight:bold;">⬅ Tilbake til Hovedmeny</a></div>
-  <header class="topbar">
+<div class="app-container">
+<a href="../index.html" class="back-button">⬅ Hovedmeny</a>
+  <div class="card" style="align-items: center; text-align: center; border-radius: 20px;">
     <div class="brand-mark">IV</div>
     <div class="brand-copy"><div class="brand">InspeksjonsVakt</div><div class="tagline">Din personlige inspeksjonsoversikt</div></div>
     <span class="version">v1.2.2</span>
-  </header>
-  <main>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:16px;">
     <section class="intro">
       <div>
         <p class="eyebrow">PARADIS SKOLE · INSPEKSJONSPLAN</p>
@@ -26,7 +27,7 @@
       <div class="hero-symbol" aria-hidden="true">◷</div>
     </section>
 
-    <section class="panel person-panel">
+    <section class="card">
       <div class="panel-heading"><div class="step">01</div><div><p class="eyebrow">PERSONLIG OVERSIKT</p><h2>Hvem er du?</h2></div></div>
       <div class="person-controls">
         <select id="personSelect" aria-label="Velg navnet ditt"><option value="">Velg navnet ditt …</option></select>
@@ -35,7 +36,7 @@
       <p class="small-note">Navn vises i formatet Etternavn, Fornavn. Favorittvalget lagres på denne enheten.</p>
     </section>
 
-    <section id="dashboard" class="dashboard hidden">
+    <section id="dashboard" class="card hidden">
       <div class="next-heading">
         <div><p class="eyebrow">DIN NESTE INSPEKSJON</p><h2 id="nextDate">—</h2></div>
         <div class="next-clock">◷</div>
@@ -68,7 +69,7 @@
       <span class="notice-icon">!</span><div><strong>Navnekoder må avklares</strong><p id="unknownText"></p></div>
     </section>
 
-    <details class="admin-panel" id="adminPanel">
+    <details class="card admin-panel" id="adminPanel">
       <summary><span class="admin-icon">⚙</span><span><strong>Administrasjon</strong><small>Oppdater inspeksjonsplanen når skolen får en ny PDF</small></span><span class="summary-chevron">⌄</span></summary>
       <div class="admin-content">
         <div class="admin-step"><span>1</span><div><strong>Last opp ny inspeksjonsplan</strong><p>PDF-en bør ha samme tabelloppsett som planen fra Paradis skole. Appen leser tekst fra tabellen; skannede bildefiler kan ikke leses automatisk.</p></div></div>
@@ -91,7 +92,8 @@
     </details>
 
     <footer>InspeksjonsVakt <span>•</span> v1.2.2 <span>•</span> Personlige favoritter lagres lokalt</footer>
-  </main>
+  </div>
   <script src="app.js" type="module"></script>
+</div>
 </body>
 </html>

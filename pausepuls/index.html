@@ -1,32 +1,76 @@
 <!doctype html>
 <html lang="no">
 <head>
-    <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#4f46e5">
 <title>PausePuls – pauseaktiviteter for lærere</title>
 <style>
-:root{--ink:#172033;--muted:#667085;--line:#e5e7eb;--primary:#4f46e5;--bg:#f7f8fc;--white:#fff}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #a5b4fc;outline-offset:2px}
-.wrap{max-width:1120px;margin:auto;padding:24px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:28px}.brand{display:flex;gap:12px;align-items:center}.logo{display:grid;place-items:center;background:var(--primary);color:white;border-radius:15px;width:48px;height:48px;font-size:25px}.brand h1{margin:0;font-size:23px;letter-spacing:-.6px}.sub{color:var(--muted);font-size:14px}.btn{border:1px solid #d0d5dd;background:white;color:var(--ink);padding:10px 15px;border-radius:12px;font-weight:650}.btn.primary{background:var(--primary);border-color:var(--primary);color:white}.btn:hover{filter:brightness(.97)}.hero h2{font-size:clamp(26px,4vw,36px);letter-spacing:-1px;margin:0}.hero p{margin:5px 0 22px;color:var(--muted)}
-.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}.tile{border:2px solid transparent;border-radius:15px;padding:14px;text-align:left;font-weight:700;min-height:94px}.tile span{display:block;font-size:25px;margin-bottom:5px}.tile[data-cat="Bevegelse"]{background:#e0f2fe;color:#075985}.tile[data-cat="Hjernetrim"]{background:#fce7f3;color:#9d174d}.tile[data-cat="Samarbeid"]{background:#d1fae5;color:#065f46}.tile[data-cat="Ro"]{background:#ede9fe;color:#5b21b6}.tile.active{border-color:var(--primary);box-shadow:0 0 0 2px #c7d2fe}
-.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;background:white;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:15px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}.field select,.field input{width:100%;border:1px solid #d0d5dd;border-radius:10px;padding:10px;background:white;color:var(--ink)}
-.random{width:100%;margin:0 0 25px;padding:13px;border:0;border-radius:12px;background:var(--primary);color:white;font-weight:750}.heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.heading h3{margin:0;font-size:20px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;text-align:left;transition:.15s}.card:hover{border-color:#a5b4fc;transform:translateY(-1px)}.cardtop{display:flex;justify-content:space-between;gap:8px;align-items:center}.chip{display:inline-block;border-radius:99px;background:#eef2ff;color:#4338ca;padding:4px 9px;font-size:12px;font-weight:750}.star{border:0;background:transparent;color:#d97706;font-size:23px;padding:0 4px}.card h4{margin:10px 0 4px;font-size:17px}.empty{padding:35px;text-align:center;color:var(--muted);display:none}.panel{margin-top:22px;background:#eef2ff;border:1px solid #e0e7ff;border-radius:16px;padding:17px}.panel h3{margin:0 0 4px}.panel p{margin:0 0 12px;color:#4338ca;font-size:14px}.panel .row{display:flex;gap:8px;flex-wrap:wrap}.detail{display:none;background:white;border:1px solid var(--line);border-radius:22px;padding:clamp(18px,4vw,36px)}.back{margin-bottom:16px}.detail h2{font-size:clamp(27px,4vw,38px);line-height:1.15;margin:12px 0}.meta{color:var(--muted);font-size:14px;margin-bottom:23px}.instructions{background:#eef2ff;border-radius:16px;padding:18px;margin-bottom:18px}.instructions h3{margin:0 0 8px;font-size:16px}.instructions p{margin:0;line-height:1.7}.timerlabel{text-align:center;color:var(--muted);font-size:13px;font-weight:700}.timer{font-size:clamp(54px,10vw,82px);font-weight:800;letter-spacing:-4px;text-align:center;font-variant-numeric:tabular-nums;margin:0}.bar{height:6px;border-radius:99px;background:#e5e7eb;overflow:hidden;margin:0 auto 20px;max-width:440px}.bar div{height:100%;background:#6366f1;width:100%;transition:width .3s}.controls{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.done{display:none;text-align:center;background:#d1fae5;color:#065f46;border-radius:12px;padding:12px;margin-top:18px;font-weight:700}.ai{display:none;margin-top:18px;background:white;border:1px solid var(--line);border-radius:16px;padding:18px}.ai textarea{width:100%;border:1px solid #d0d5dd;border-radius:10px;padding:10px;min-height:75px}.ai p{color:var(--muted);font-size:14px}.generated{white-space:pre-wrap;background:#f8fafc;border-radius:12px;padding:14px;margin-top:12px;display:none}.foot{color:var(--muted);font-size:12px;text-align:center;margin:25px 0 5px}
-@media(max-width:760px){.wrap{padding:15px}.tiles{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.cards{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.top{align-items:flex-start}.brand h1{font-size:20px}}
+.top { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; margin-bottom: 10px; }
+.logo { font-size: 32px; background: var(--primary); color: white; width: 56px; height: 56px; display: grid; place-items: center; border-radius: 16px; margin: 0 auto 8px;}
+.brand h1 { margin: 0; font-size: 24px; font-weight: 800; color: #2C1A1D; }
+.sub { color: var(--text-muted); font-size: 14px; }
+.hero { text-align: center; margin-bottom: 20px; }
+.hero h2 { font-size: 20px; font-weight: 800; color: #2C1A1D; margin: 0 0 5px; }
+.hero p { font-size: 14px; color: var(--text-muted); }
+.tiles { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.tile { background: white; border: 2px solid transparent; border-radius: 16px; padding: 16px; text-align: left; font-weight: 800; font-size: 16px; display: flex; align-items: center; gap: 15px; cursor: pointer; transition: transform 0.1s;}
+.tile:active { transform: scale(0.98); }
+.tile span { font-size: 24px; }
+.tile[data-cat="Bevegelse"]{background:#e0f2fe;color:#075985}
+.tile[data-cat="Hjernetrim"]{background:#fce7f3;color:#9d174d}
+.tile[data-cat="Samarbeid"]{background:#d1fae5;color:#065f46}
+.tile[data-cat="Ro"]{background:#ede9fe;color:#5b21b6}
+.tile.active{border-color:var(--primary); box-shadow: 0 0 0 2px var(--primary);}
+.filters { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.field label { display: block; font-size: 11px; font-weight: 800; margin-bottom: 5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;}
+.field select, .field input { width: 100%; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; background: #fff; font-size: 16px; font-family: inherit;}
+.random { width: 100%; padding: 16px; border: none; border-radius: 16px; background: var(--primary); color: white; font-weight: 800; font-size: 16px; margin-bottom: 10px; cursor: pointer; }
+.heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.heading h3 { margin: 0; font-size: 18px; font-weight: 800; color: #2C1A1D; }
+.cards { display: flex; flex-direction: column; gap: 12px; }
+.cards .card { background: white; border: 1px solid #e5e7eb; border-radius: 16px; padding: 16px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.02); display: block; width: 100%; cursor: pointer; transition: transform 0.1s;}
+.cards .card:active { transform: scale(0.98); }
+.cardtop { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.chip { background: #eef2ff; color: #4338ca; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 800; }
+.cards .card h4 { margin: 0 0 5px; font-size: 16px; font-weight: 800; color: #2C1A1D; }
+.empty { padding: 30px; text-align: center; color: var(--text-muted); background: white; border-radius: 16px; display: none; font-size: 14px;}
+.panel, .ai { background: #f8fafc; border-radius: 16px; padding: 20px; margin-top: 20px; border: 1px solid #e2e8f0; }
+.panel h3, .ai h3 { margin: 0 0 10px; font-size: 16px; font-weight: 800; color: #2C1A1D; }
+.panel p, .ai p { color: var(--text-muted); font-size: 13px; margin: 0 0 15px; line-height: 1.5; }
+.btn { padding: 14px 20px; border-radius: 12px; border: 1px solid #d0d5dd; background: white; font-weight: 800; font-size: 15px; color: #2C1A1D; cursor: pointer; width: 100%; }
+.btn.primary { background: var(--primary); color: white; border-color: var(--primary); }
+.row { display: flex; flex-direction: column; gap: 10px; }
+.ai textarea { width: 100%; border: 1px solid #cbd5e1; border-radius: 12px; padding: 14px; min-height: 100px; font-size: 14px; font-family: inherit;}
+.generated { background: #e2e8f0; padding: 15px; border-radius: 12px; margin-top: 15px; font-size: 14px; display: none; white-space: pre-wrap; line-height: 1.5;}
+.detail { display: none; }
+.detail h2 { font-size: 26px; line-height: 1.2; margin: 15px 0 5px; font-weight: 800; color: #2C1A1D; }
+.meta { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; font-weight: 600;}
+.instructions { background: #f0f7ff; padding: 20px; border-radius: 16px; margin-bottom: 25px; border: 1px solid #dbeafe;}
+.instructions h3 { margin: 0 0 10px; font-size: 13px; font-weight: 800; text-transform: uppercase; color: #1e40af; }
+.instructions p { margin: 0; line-height: 1.6; color: #1e3a8a; font-size: 15px;}
+.timerlabel { text-align: center; font-size: 12px; font-weight: 800; color: var(--text-muted); margin-bottom: 5px; letter-spacing: 1px;}
+.timer { font-size: 64px; font-weight: 900; text-align: center; color: #2C1A1D; margin: 0 0 15px; letter-spacing: -2px; }
+.bar { height: 10px; background: #e5e7eb; border-radius: 10px; overflow: hidden; margin-bottom: 25px; }
+.bar div { height: 100%; background: var(--primary); transition: width 1s linear; }
+.controls { display: flex; flex-direction: column; gap: 12px; }
+.done { display: none; text-align: center; background: #d1fae5; color: #065f46; padding: 16px; border-radius: 12px; margin-top: 20px; font-weight: 800; }
+.back { margin-bottom: 20px; width: 100%; display: flex; justify-content: center;}
+.star { background: none; border: none; font-size: 26px; color: #d97706; padding: 0; cursor: pointer;}
+.foot { text-align: center; color: var(--text-muted); font-size: 12px; margin-top: 30px; }
 </style>
 </head>
 <body>
-<div style="text-align:center; margin: 15px;"><a href="../index.html" style="text-decoration:none; background:rgba(0,0,0,0.1); color:inherit; padding:8px 16px; border-radius:20px; font-size:14px; font-weight:bold;">⬅ Tilbake til Hovedmeny</a></div>
-<div class="wrap">
+<div class="app-container">
+<a href="../index.html" class="back-button">⬅ Hovedmeny</a>
 <header class="top">
  <div class="brand"><div class="logo">⚡</div><div><h1>PausePuls</h1><div class="sub">Små pauser. Ny energi.</div></div></div>
  <button class="btn" id="favoritesToggle">☆ Favoritter</button>
 </header>
 <main>
 <section id="home">
+<div class="card">
  <div class="hero"><h2>Hva trenger klassen nå?</h2><p>Finn en aktivitet – og kom i gang på sekunder.</p></div>
  <div class="tiles">
   <button class="tile" data-cat="Bevegelse"><span>🏃</span>Bevegelse</button>
@@ -40,13 +84,17 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-vis
   <div class="field"><label for="kind">Aktivitetstype</label><select id="kind"><option value="all">Alle typer</option><option>Bevegelse</option><option>Hjernetrim</option><option>Samarbeid</option><option>Ro</option></select></div>
   <div class="field"><label for="search">Søk</label><input id="search" placeholder="Søk etter aktivitet…"></div>
  </div>
- <button class="random" id="random">⤨ Trekk en tilfeldig aktivitet</button>
+ </div>
+<button class="random" id="random">⤨ Trekk en tilfeldig aktivitet</button>
+<div class="card">
  <div class="heading"><h3 id="listTitle">Aktiviteter</h3><span class="sub" id="count"></span></div>
  <div class="cards" id="cards"></div><div class="empty" id="empty">Ingen aktiviteter passer filtrene. Prøv å endre dem.</div>
  <section class="panel"><h3>✨ Lag en ny aktivitet</h3><p>Beskriv hva du trenger, og få et forslag du kan bruke i klasserommet. AI-generering krever senere tilkobling til en AI-tjeneste.</p><div class="row"><button class="btn" id="showAi">Åpne aktivitetsgenerator</button></div></section>
  <section class="ai" id="ai"><h3>Aktivitetsgenerator</h3><p>Lag et utkast lokalt med en enkel aktivitetsmal. Ingen AI-tjeneste er koblet til i denne første versjonen.</p><div class="field"><label for="prompt">Hva ønsker du?</label><textarea id="prompt" placeholder="For eksempel: En rolig 3-minutters aktivitet for 2. trinn etter friminuttet."></textarea></div><div class="row" style="margin-top:10px"><button class="btn primary" id="generate">Lag aktivitetsutkast</button><button class="btn" id="hideAi">Lukk</button></div><div class="generated" id="generated"></div></section>
+</div>
 </section>
 <section id="detail" class="detail">
+<div class="card">
  <button class="btn back" id="back">← Tilbake til aktivitetsbanken</button>
  <div class="cardtop"><span class="chip" id="dCat"></span><button class="star" id="dStar" aria-label="Lagre som favoritt">☆</button></div>
  <h2 id="dTitle"></h2><div class="meta" id="dMeta"></div>
@@ -54,6 +102,7 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-vis
  <div class="timerlabel">NEDTELLING</div><div class="timer" id="timer">03:00</div><div class="bar"><div id="barFill"></div></div>
  <div class="controls"><button class="btn primary" id="start">▶ Start</button><button class="btn" id="reset">↺ Start på nytt</button><button class="btn" id="fullscreen">⛶ Fullskjerm</button></div>
  <div class="done" id="done">🎉 Bra jobbet! Pausen er ferdig.</div>
+</div>
 </section>
 </main>
 <div class="foot">PausePuls · Første versjon · Aktivitetene kan tilpasses klassen og rommet.</div>

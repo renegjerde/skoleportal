@@ -6,65 +6,32 @@
     <title>Lærerverktøy</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .portal-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            text-align: center;
-        }
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-        .app-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            border: 2px solid transparent;
-            transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
-        }
-        .app-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border-color: rgba(0,0,0,0.1);
-        }
-        .app-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        .app-desc {
-            font-size: 0.95rem;
-            opacity: 0.8;
-            line-height: 1.4;
-        }
+        .portal-container { max-width: 440px; margin: 0 auto; padding: 1rem 0; text-align: center; display: flex; flex-direction: column; gap: 20px; }
+        .app-grid { display: flex; flex-direction: column; gap: 16px; }
+        .app-card { background: #ffffff; padding: 24px; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 8px; border: 2px solid transparent; transition: transform 0.2s; text-align: left; }
+        .app-card:active { transform: scale(0.98); }
+        .app-title { font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 10px;}
+        .app-desc { font-size: 0.95rem; color: #666; line-height: 1.4; }
     </style>
 </head>
 <body>
     <div class="portal-container">
-        <h1>Verktøykasse for Skolen</h1>
-        <p style="opacity: 0.8; font-size: 1.1rem;">Alt du trenger på ett sted. Velg en app under for å starte.</p>
-
+        <div style="margin-bottom: 10px;">
+            <h1 style="font-size: 28px; font-weight: 800; color: #2C1A1D; margin-bottom: 8px;">Verktøykasse</h1>
+            <p style="color: #666; font-size: 15px;">Alt du trenger på ett sted.</p>
+        </div>
         <div class="app-grid">
             <a href="kaffestatus/index.html" class="app-card">
-                <div class="app-title">☕ Kaffestatus</div>
-                <div class="app-desc">Hold oversikt over kaffekokingen.</div>
+                <div class="app-title"><span style="font-size: 24px;">☕</span> Kaffestatus</div>
+                <div class="app-desc">Hold oversikt over kaffekokingen på pauserommet.</div>
             </a>
-
             <a href="inspeksjonsvakt/index.html" class="app-card">
-                <div class="app-title">👀 Inspeksjonsvakt</div>
-                <div class="app-desc">Vaktoversikt og planlegging for uken.</div>
+                <div class="app-title"><span style="font-size: 24px;">👀</span> Inspeksjonsvakt</div>
+                <div class="app-desc">Din personlige vaktplan og neste inspeksjon.</div>
             </a>
-
             <a href="pausepuls/index.html" class="app-card">
-                <div class="app-title">🧘 PausePuls</div>
-                <div class="app-desc">Verktøy for å huske viktige pustepauser.</div>
+                <div class="app-title"><span style="font-size: 24px;">⚡</span> PausePuls</div>
+                <div class="app-desc">Raske pauseaktiviteter for å gi klassen ny energi.</div>
             </a>
         </div>
     </div>
